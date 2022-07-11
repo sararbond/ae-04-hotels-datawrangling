@@ -258,9 +258,19 @@ exercise?
 `label-me-2`).
 
 ``` r
-# add code here
-# pay attention to correctness and code style
+hotels %>%
+  filter(is_canceled == 0) %>%
+  count(adults, sort = TRUE)
 ```
+
+    ## # A tibble: 5 × 2
+    ##   adults     n
+    ##    <dbl> <int>
+    ## 1      2 54422
+    ## 2      1 16353
+    ## 3      3  4051
+    ## 4      0   294
+    ## 5      4    46
 
 ### Exercise 7.
 
