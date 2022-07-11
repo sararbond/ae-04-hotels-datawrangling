@@ -97,7 +97,7 @@ It also shouldn't repeat a previous label, otherwise R Markdown will give you an
 
 ```{r label freq of adults}
 hotels %>%
-  arrange(desc(adults))
+  count(adults, sort = TRUE)
 ```
 
 ### Exercise 6.

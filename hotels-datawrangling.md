@@ -226,29 +226,26 @@ Markdown will give you an error about repeated R chunk labels.
 
 ``` r
 hotels %>%
-  arrange(desc(adults))
+  count(adults, sort = TRUE)
 ```
 
-    ## # A tibble: 119,390 × 32
-    ##    hotel        is_canceled lead_time arrival_date_year arrival_date_month
-    ##    <chr>              <dbl>     <dbl>             <dbl> <chr>             
-    ##  1 Resort Hotel           1       338              2015 October           
-    ##  2 Resort Hotel           1       336              2015 September         
-    ##  3 Resort Hotel           1       304              2015 September         
-    ##  4 Resort Hotel           1       349              2015 September         
-    ##  5 Resort Hotel           1       352              2015 September         
-    ##  6 Resort Hotel           1       333              2015 September         
-    ##  7 Resort Hotel           1       340              2015 September         
-    ##  8 Resort Hotel           1       347              2015 September         
-    ##  9 Resort Hotel           1       354              2015 September         
-    ## 10 Resort Hotel           1       361              2015 October           
-    ## # … with 119,380 more rows, and 27 more variables:
-    ## #   arrival_date_week_number <dbl>, arrival_date_day_of_month <dbl>,
-    ## #   stays_in_weekend_nights <dbl>, stays_in_week_nights <dbl>, adults <dbl>,
-    ## #   children <dbl>, babies <dbl>, meal <chr>, country <chr>,
-    ## #   market_segment <chr>, distribution_channel <chr>, is_repeated_guest <dbl>,
-    ## #   previous_cancellations <dbl>, previous_bookings_not_canceled <dbl>,
-    ## #   reserved_room_type <chr>, assigned_room_type <chr>, …
+    ## # A tibble: 14 × 2
+    ##    adults     n
+    ##     <dbl> <int>
+    ##  1      2 89680
+    ##  2      1 23027
+    ##  3      3  6202
+    ##  4      0   403
+    ##  5      4    62
+    ##  6     26     5
+    ##  7      5     2
+    ##  8     20     2
+    ##  9     27     2
+    ## 10      6     1
+    ## 11     10     1
+    ## 12     40     1
+    ## 13     50     1
+    ## 14     55     1
 
 ### Exercise 6.
 
